@@ -1,0 +1,82 @@
+/* =====================================================================
+   Data_Link Console — tokens
+   Identidad heredada de la consola actual: verde profundo + acento dorado.
+   Todo color y espaciado sale de aqui. No hardcodear hex en componentes.
+   ===================================================================== */
+
+:root {
+  /* Superficies */
+  --dl-bg:            #071310;
+  --dl-surface:       #0d1f19;
+  --dl-surface-2:     #12291f;
+  --dl-border:        #1e3a2c;
+  --dl-border-strong: #2c5340;
+
+  /* Acento (dorado) */
+  --dl-gold:          #f0c860;
+  --dl-gold-strong:   #d99b3c;
+  --dl-gold-dim:      rgba(240, 200, 96, 0.12);
+  --dl-gradient-gold: linear-gradient(100deg, var(--dl-gold), var(--dl-gold-strong));
+
+  /* Estado */
+  --dl-ok:            #35d68a;
+  --dl-warn:          #e0a33a;
+  --dl-danger:        #e0685f;
+
+  /* Texto */
+  --dl-text:          #e8f0ea;
+  --dl-text-muted:    #93a89b;
+  --dl-text-faint:    #63786c;
+
+  /* Tipografia */
+  --dl-font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
+  --dl-font-mono: var(--font-mono), ui-monospace, "SF Mono", monospace;
+
+  /* Escala */
+  --dl-text-xs:  0.75rem;
+  --dl-text-sm:  0.875rem;
+  --dl-text-md:  1rem;
+  --dl-text-lg:  1.25rem;
+  --dl-text-xl:  1.75rem;
+  --dl-text-2xl: 2.5rem;
+
+  /* Ritmo */
+  --dl-space-1: 0.25rem;
+  --dl-space-2: 0.5rem;
+  --dl-space-3: 0.75rem;
+  --dl-space-4: 1rem;
+  --dl-space-6: 1.5rem;
+  --dl-space-8: 2rem;
+  --dl-space-12: 3rem;
+
+  --dl-radius:    10px;
+  --dl-radius-lg: 16px;
+
+  --dl-shell-sidebar: 240px;
+  --dl-content-max:   1200px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--dl-bg);
+  color: var(--dl-text);
+  font-family: var(--dl-font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+:focus-visible {
+  outline: 2px solid var(--dl-gold);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

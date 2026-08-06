@@ -1,0 +1,50 @@
+.strip {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--dl-space-6);
+  padding: var(--dl-space-3) var(--dl-space-4);
+  border: 1px solid var(--dl-border);
+  border-radius: var(--dl-radius);
+  background: var(--dl-surface);
+}
+
+.plan { display: flex; align-items: baseline; gap: var(--dl-space-2); }
+
+.label {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dl-text-faint);
+}
+
+.value { font-size: var(--dl-text-sm); font-variant-numeric: tabular-nums; }
+.plan .value { color: var(--dl-gold); font-weight: 700; letter-spacing: 0.04em; }
+.of { color: var(--dl-text-faint); }
+
+.link { font-size: var(--dl-text-xs); color: var(--dl-gold); }
+.link:hover { text-decoration: underline; }
+
+.usage { display: grid; gap: var(--dl-space-2); min-width: 0; }
+
+.usageHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--dl-space-3);
+}
+
+.meter { height: 4px; border-radius: 2px; background: var(--dl-border); overflow: hidden; }
+.fill { display: block; height: 100%; background: var(--dl-gradient-gold); }
+.fillWarn { display: block; height: 100%; background: var(--dl-danger); }
+
+.service { display: flex; align-items: center; gap: var(--dl-space-2); }
+.serviceText { font-size: var(--dl-text-xs); color: var(--dl-text-muted); }
+
+.dotOk, .dotWarn { width: 7px; height: 7px; border-radius: 50%; }
+.dotOk { background: var(--dl-ok); }
+.dotWarn { background: var(--dl-warn); }
+
+@media (max-width: 760px) {
+  .strip { grid-template-columns: 1fr; gap: var(--dl-space-4); }
+}

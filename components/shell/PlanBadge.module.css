@@ -1,0 +1,24 @@
+.badge {
+  display: flex;
+  align-items: center;
+  gap: var(--dl-space-3);
+  font-size: var(--dl-text-xs);
+}
+
+.plan {
+  color: var(--dl-gold);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.usage { color: var(--dl-text-muted); }
+
+.meter {
+  width: 90px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--dl-border);
+  overflow: hidden;
+}
+
+.fill { display: block; height: 100%; background: var(--dl-gradient-gold); }

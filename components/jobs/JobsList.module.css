@@ -1,0 +1,79 @@
+.muted { color: var(--dl-text-muted); font-size: var(--dl-text-sm); }
+.error { color: var(--dl-danger); font-size: var(--dl-text-sm); }
+
+.empty {
+  border: 1px dashed var(--dl-border-strong);
+  border-radius: var(--dl-radius-lg);
+  padding: var(--dl-space-12) var(--dl-space-6);
+  text-align: center;
+}
+
+.emptyTitle { margin: 0 0 var(--dl-space-2); font-size: var(--dl-text-lg); color: var(--dl-text); }
+
+.cta {
+  display: inline-block;
+  margin-top: var(--dl-space-6);
+  padding: var(--dl-space-3) var(--dl-space-6);
+  border-radius: var(--dl-radius);
+  background: var(--dl-gradient-gold);
+  color: #14231a;
+  font-size: var(--dl-text-sm);
+  font-weight: 600;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--dl-space-4);
+  margin-bottom: var(--dl-space-6);
+}
+
+.title { margin: 0; font-size: var(--dl-text-lg); color: var(--dl-gold); }
+
+.filters { display: flex; gap: var(--dl-space-1); }
+
+.filter, .filterActive {
+  font: inherit;
+  font-size: var(--dl-text-xs);
+  font-weight: 600;
+  padding: var(--dl-space-1) var(--dl-space-3);
+  border-radius: 999px;
+  border: 1px solid var(--dl-border);
+  background: transparent;
+  color: var(--dl-text-muted);
+  cursor: pointer;
+}
+
+.filter:hover { background: var(--dl-surface-2); color: var(--dl-text); }
+
+.filterActive {
+  border-color: var(--dl-gold);
+  background: var(--dl-gold-dim);
+  color: var(--dl-gold);
+}
+
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dl-space-4);
+  margin-top: var(--dl-space-4);
+}
+
+.pagerButtons { display: flex; gap: var(--dl-space-2); }
+
+.pageButton {
+  font: inherit;
+  font-size: var(--dl-text-sm);
+  padding: var(--dl-space-2) var(--dl-space-4);
+  border-radius: var(--dl-radius);
+  border: 1px solid var(--dl-border-strong);
+  background: transparent;
+  color: var(--dl-text);
+  cursor: pointer;
+}
+
+.pageButton:hover:not(:disabled) { background: var(--dl-surface-2); }
+.pageButton:disabled { opacity: 0.4; cursor: not-allowed; }

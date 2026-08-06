@@ -1,0 +1,13 @@
+.pill {
+  display: inline-block;
+  padding: 2px var(--dl-space-2);
+  border-radius: 999px;
+  font-size: var(--dl-text-xs);
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.completed { color: var(--dl-ok); border-color: var(--dl-ok); }
+.processing, .pending { color: var(--dl-warn); border-color: var(--dl-warn); }
+.failed { color: var(--dl-danger); border-color: var(--dl-danger); }
+.expired { color: var(--dl-text-faint); border-color: var(--dl-border-strong); }

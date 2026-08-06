@@ -1,0 +1,98 @@
+.page { display: grid; gap: var(--dl-space-8); max-width: 760px; }
+
+.muted { color: var(--dl-text-muted); font-size: var(--dl-text-sm); margin: 0; }
+.error { color: var(--dl-danger); font-size: var(--dl-text-sm); }
+
+.hero { display: grid; gap: var(--dl-space-1); }
+
+.heroLabel {
+  margin: 0;
+  font-size: var(--dl-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--dl-text-faint);
+}
+
+.heroValue {
+  margin: 0;
+  font-size: var(--dl-text-2xl);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--dl-gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--dl-space-4);
+  padding: var(--dl-space-4) 0;
+  border-top: 1px solid var(--dl-border);
+  border-bottom: 1px solid var(--dl-border);
+}
+
+.strip dt {
+  font-size: var(--dl-text-xs);
+  color: var(--dl-text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.strip dd {
+  margin: var(--dl-space-1) 0 0;
+  font-size: var(--dl-text-lg);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.failed { color: var(--dl-danger); }
+
+.quota { display: grid; gap: var(--dl-space-3); }
+
+.quotaHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--dl-space-2);
+}
+
+.quotaTitle { margin: 0; font-size: var(--dl-text-md); color: var(--dl-text); }
+
+.meter {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--dl-border);
+  overflow: hidden;
+}
+
+.fill { display: block; height: 100%; background: var(--dl-gradient-gold); }
+.fillWarn { display: block; height: 100%; background: var(--dl-danger); }
+
+.note { margin: 0; font-size: var(--dl-text-xs); color: var(--dl-text-faint); }
+
+.cta {
+  justify-self: start;
+  padding: var(--dl-space-2) var(--dl-space-4);
+  border-radius: var(--dl-radius);
+  background: var(--dl-gradient-gold);
+  color: #14231a;
+  font-size: var(--dl-text-sm);
+  font-weight: 600;
+}
+
+.lastJob { margin: 0; font-size: var(--dl-text-sm); color: var(--dl-text-muted); }
+.lastJob a { color: var(--dl-gold); }
+.lastJob a:hover { text-decoration: underline; }
+
+.empty {
+  border: 1px dashed var(--dl-border-strong);
+  border-radius: var(--dl-radius-lg);
+  padding: var(--dl-space-12) var(--dl-space-6);
+  text-align: center;
+  display: grid;
+  gap: var(--dl-space-2);
+  justify-items: center;
+}
+
+.emptyTitle { margin: 0; font-size: var(--dl-text-lg); color: var(--dl-text); }

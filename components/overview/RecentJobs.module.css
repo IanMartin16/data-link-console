@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--dl-space-4);
+  margin-bottom: var(--dl-space-4);
+}
+
+.title { margin: 0; font-size: var(--dl-text-md); color: var(--dl-text); }
+.link { font-size: var(--dl-text-sm); color: var(--dl-gold); }
+.link:hover { text-decoration: underline; }
+.muted { margin: 0; font-size: var(--dl-text-sm); color: var(--dl-text-faint); }
+
+.empty {
+  border: 1px dashed var(--dl-border);
+  border-radius: var(--dl-radius);
+  padding: var(--dl-space-6);
+  text-align: center;
+}
