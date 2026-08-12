@@ -53,13 +53,14 @@ export default function LandingPage() {
         </div>
         <div>
           <strong className={styles.proofValue}>59 MB</strong>
-          <span className={styles.proofLabel}>file size — within the plan</span>
+          <span className={styles.proofLabel}>file size — well inside the limit</span>
         </div>
       </section>
 
       <p className={styles.proofNote}>
-        Measured on the live service, not a lab. That file fits inside the 100 MB
-        limit, so you can reproduce it with your own data on the day you sign up.
+        Measured on the live service, not a lab. That file sits well inside the
+        150 MB limit, so you can reproduce it with your own data on the day you
+        sign up.
       </p>
 
       <section className={styles.section}>

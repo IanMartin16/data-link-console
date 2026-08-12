@@ -1,0 +1,133 @@
+.page { padding: var(--dl-space-12) 0; display: grid; gap: var(--dl-space-12); }
+
+.header { max-width: 58ch; display: grid; gap: var(--dl-space-4); }
+
+.title {
+  margin: 0;
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.lead { margin: 0; font-size: var(--dl-text-md); line-height: 1.6; color: var(--dl-text-muted); }
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--dl-space-4);
+  align-items: start;
+}
+
+.plan {
+  position: relative;
+  display: grid;
+  gap: var(--dl-space-4);
+  padding: var(--dl-space-6);
+  border: 1px solid var(--dl-border);
+  border-radius: var(--dl-radius-lg);
+  background: var(--dl-surface);
+}
+
+.featured { border-color: var(--dl-gold-strong); background: var(--dl-surface-2); }
+
+.badge {
+  position: absolute;
+  top: calc(var(--dl-space-3) * -1);
+  left: var(--dl-space-6);
+  padding: 2px var(--dl-space-3);
+  border-radius: 999px;
+  background: var(--dl-gradient-gold);
+  color: #14231a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.planName { margin: 0; font-size: var(--dl-text-md); color: var(--dl-gold); }
+
+.price { margin: 0; display: flex; align-items: baseline; gap: var(--dl-space-1); }
+.price strong { font-size: var(--dl-text-2xl); line-height: 1; font-variant-numeric: tabular-nums; }
+.talk { font-size: var(--dl-text-lg) !important; color: var(--dl-text-muted); }
+.period { font-size: var(--dl-text-sm); color: var(--dl-text-faint); }
+
+.planFor { margin: 0; font-size: var(--dl-text-sm); line-height: 1.55; color: var(--dl-text-muted); }
+
+.highlights { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--dl-space-2); }
+
+.highlights li {
+  position: relative;
+  padding-left: var(--dl-space-4);
+  font-size: var(--dl-text-sm);
+  line-height: 1.5;
+}
+
+.highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--dl-gold);
+}
+
+.primaryCta, .secondaryCta {
+  text-align: center;
+  padding: var(--dl-space-3);
+  border-radius: var(--dl-radius);
+  font-size: var(--dl-text-sm);
+  font-weight: 700;
+}
+
+.primaryCta { background: var(--dl-gradient-gold); color: #14231a; }
+
+.secondaryCta { border: 1px solid var(--dl-border-strong); color: var(--dl-text); font-weight: 600; }
+.secondaryCta:hover { background: var(--dl-surface-2); }
+
+.fine { margin: 0; font-size: var(--dl-text-xs); color: var(--dl-text-faint); text-align: center; }
+
+.h2 { margin: 0 0 var(--dl-space-6); font-size: var(--dl-text-lg); color: var(--dl-gold); }
+
+.tableWrap { overflow-x: auto; border: 1px solid var(--dl-border); border-radius: var(--dl-radius-lg); }
+
+.table { width: 100%; border-collapse: collapse; font-size: var(--dl-text-sm); }
+
+.table thead th {
+  padding: var(--dl-space-3) var(--dl-space-4);
+  text-align: left;
+  font-size: var(--dl-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--dl-text-faint);
+  border-bottom: 1px solid var(--dl-border);
+}
+
+.table tbody th {
+  padding: var(--dl-space-3) var(--dl-space-4);
+  text-align: left;
+  font-weight: 500;
+  color: var(--dl-text-muted);
+}
+
+.table td {
+  padding: var(--dl-space-3) var(--dl-space-4);
+  border-bottom: 1px solid var(--dl-border);
+  font-variant-numeric: tabular-nums;
+}
+
+.table tbody th { border-bottom: 1px solid var(--dl-border); }
+.table tbody tr:last-child th, .table tbody tr:last-child td { border-bottom: none; }
+
+.featuredCol { background: var(--dl-gold-dim); }
+
+.yes { color: var(--dl-ok); }
+.no { color: var(--dl-text-faint); }
+
+.faq { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--dl-space-6); }
+.faq dt { font-size: var(--dl-text-sm); font-weight: 600; margin-bottom: var(--dl-space-2); }
+.faq dd { margin: 0; font-size: var(--dl-text-sm); line-height: 1.6; color: var(--dl-text-muted); }
+
+.link { color: var(--dl-gold); }
+.link:hover { text-decoration: underline; }
