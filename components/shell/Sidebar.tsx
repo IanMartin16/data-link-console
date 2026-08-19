@@ -68,7 +68,7 @@ export default function Sidebar() {
       <div className={styles.top}>
         {!collapsed && (
           <Link href="/" className={styles.ecosystem}>
-            evilink
+            evi_link devs
           </Link>
         )}
         <button

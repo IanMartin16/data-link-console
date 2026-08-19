@@ -1,7 +1,12 @@
-import AccessCard from "@/components/auth/AccessCard";
+import AuthLayout from "@/components/auth/AuthLayout";
+import SignInForm from "@/components/auth/SignInForm";
 
 export const metadata = { title: "Sign in" };
 
 export default function LoginPage() {
-  return <AccessCard initialMode="existing" />;
+  return (
+    <AuthLayout>
+      <SignInForm />
+    </AuthLayout>
+  );
 }

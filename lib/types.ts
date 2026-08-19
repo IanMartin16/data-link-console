@@ -22,6 +22,7 @@ export interface DashboardData {
     customFiltersAllowed: boolean;
   };
   presets: PresetOption[];
+  email: string | null;
   apiKeyMasked: string | null;
   recentJobs: Job[];
   /** De que motor reporta esta respuesta. Pedir al backend que lo declare. */

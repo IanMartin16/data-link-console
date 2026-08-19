@@ -17,6 +17,7 @@ export async function getDashboard(): Promise<DashboardData> {
     plan: raw.user?.plan ?? "free",
     planStatus: billing.status ?? "active",
     canUpgrade: billing.can_upgrade ?? false,
+    email: raw.user?.email ?? null,
     apiKeyMasked: raw.api_key?.masked ?? null,
     filesUsed: usage.files_used ?? 0,
     filesLimit: limits.files_per_month ?? 0,

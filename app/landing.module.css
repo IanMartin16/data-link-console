@@ -1,4 +1,4 @@
-.hero { padding: var(--dl-space-12) 0 var(--dl-space-8); max-width: 42ch; }
+.hero { padding: var(--dl-space-12) 0 var(--dl-space-8); }
 
 .headline {
   margin: 0;
@@ -6,6 +6,7 @@
   line-height: 1.05;
   letter-spacing: -0.02em;
   font-weight: 700;
+  max-width: 16ch;
 }
 
 .headline em { font-style: normal; color: var(--dl-gold); }
@@ -23,6 +24,7 @@
 .heroNote { margin: var(--dl-space-4) 0 0; font-size: var(--dl-text-xs); color: var(--dl-text-faint); }
 
 .primary {
+  display: inline-block;
   padding: var(--dl-space-3) var(--dl-space-6);
   border-radius: var(--dl-radius);
   background: var(--dl-gradient-gold);
@@ -44,16 +46,19 @@
 .secondary:hover { background: var(--dl-surface-2); }
 
 .proof {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: var(--dl-space-6);
   padding: var(--dl-space-6);
   border: 1px solid var(--dl-border);
   border-radius: var(--dl-radius-lg);
   background: var(--dl-surface);
 }
 
-.proof div { display: grid; gap: var(--dl-space-1); }
+.proofFigures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--dl-space-6);
+}
+
+.proofFigures div { display: grid; gap: var(--dl-space-1); }
 
 .proofValue {
   font-size: var(--dl-text-xl);
@@ -65,7 +70,9 @@
 .proofLabel { font-size: var(--dl-text-xs); color: var(--dl-text-muted); }
 
 .proofNote {
-  margin: var(--dl-space-3) 0 0;
+  margin: var(--dl-space-6) 0 0;
+  padding-top: var(--dl-space-4);
+  border-top: 1px solid var(--dl-border);
   font-size: var(--dl-text-xs);
   color: var(--dl-text-faint);
   max-width: 60ch;

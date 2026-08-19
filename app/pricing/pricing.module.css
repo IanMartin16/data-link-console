@@ -74,6 +74,7 @@
 }
 
 .primaryCta, .secondaryCta {
+  display: inline-block;
   text-align: center;
   padding: var(--dl-space-3);
   border-radius: var(--dl-radius);
@@ -131,3 +132,11 @@
 
 .link { color: var(--dl-gold); }
 .link:hover { text-decoration: underline; }
+
+.tableNote {
+  margin: var(--dl-space-3) 0 0;
+  font-size: var(--dl-text-xs);
+  line-height: 1.6;
+  color: var(--dl-text-faint);
+  max-width: 62ch;
+}

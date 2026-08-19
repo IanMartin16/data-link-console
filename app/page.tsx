@@ -43,25 +43,26 @@ export default function LandingPage() {
       </section>
 
       <section className={styles.proof} aria-label="Measured performance">
-        <div>
-          <strong className={styles.proofValue}>1,000,000</strong>
-          <span className={styles.proofLabel}>rows deduplicated</span>
+        <div className={styles.proofFigures}>
+          <div>
+            <strong className={styles.proofValue}>1,000,000</strong>
+            <span className={styles.proofLabel}>rows deduplicated</span>
+          </div>
+          <div>
+            <strong className={styles.proofValue}>8s</strong>
+            <span className={styles.proofLabel}>start to finish</span>
+          </div>
+          <div>
+            <strong className={styles.proofValue}>59 MB</strong>
+            <span className={styles.proofLabel}>file size — well inside the limit</span>
+          </div>
         </div>
-        <div>
-          <strong className={styles.proofValue}>8s</strong>
-          <span className={styles.proofLabel}>start to finish</span>
-        </div>
-        <div>
-          <strong className={styles.proofValue}>59 MB</strong>
-          <span className={styles.proofLabel}>file size — well inside the limit</span>
-        </div>
+        <p className={styles.proofNote}>
+          Measured on the live service, not a lab. That file sits well inside the
+          150 MB limit, so you can reproduce it with your own data on the day you
+          sign up.
+        </p>
       </section>
-
-      <p className={styles.proofNote}>
-        Measured on the live service, not a lab. That file sits well inside the
-        150 MB limit, so you can reproduce it with your own data on the day you
-        sign up.
-      </p>
 
       <section className={styles.section}>
         <h2 className={styles.h2}>How it works</h2>

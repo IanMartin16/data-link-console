@@ -10,7 +10,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: var(--dl-space-4);
+  gap: var(--dl-space-6);
+  min-height: 52px;
   padding: var(--dl-space-3) var(--dl-space-6);
   border-bottom: 1px solid var(--dl-border);
 }

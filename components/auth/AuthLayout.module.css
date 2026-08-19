@@ -1,0 +1,82 @@
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.formSide {
+  display: flex;
+  flex-direction: column;
+  padding: var(--dl-space-8) var(--dl-space-6);
+}
+
+.brand {
+  font-size: var(--dl-text-md);
+  font-weight: 700;
+  color: var(--dl-gold);
+}
+
+.formWrap {
+  flex: 1;
+  display: grid;
+  align-content: center;
+  justify-items: stretch;
+  max-width: 380px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--dl-space-8) 0;
+}
+
+.pitch {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid var(--dl-border);
+  background: var(--dl-surface);
+  padding: var(--dl-space-12) var(--dl-space-8);
+}
+
+.pitchInner { max-width: 420px; }
+
+.metricLabel {
+  margin: 0;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--dl-text-faint);
+}
+
+.metric {
+  margin: var(--dl-space-2) 0 var(--dl-space-8);
+  font-size: var(--dl-text-xl);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--dl-gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.metric span {
+  display: block;
+  font-size: var(--dl-text-sm);
+  font-weight: 400;
+  color: var(--dl-text-muted);
+  margin-top: var(--dl-space-1);
+}
+
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--dl-space-6); }
+
+.points li {
+  display: grid;
+  gap: var(--dl-space-1);
+  padding-left: var(--dl-space-4);
+  border-left: 2px solid var(--dl-border-strong);
+  font-size: var(--dl-text-sm);
+  line-height: 1.6;
+  color: var(--dl-text-muted);
+}
+
+.points strong { color: var(--dl-text); font-weight: 600; }
+
+@media (max-width: 900px) {
+  .page { grid-template-columns: 1fr; }
+  .pitch { display: none; }
+}

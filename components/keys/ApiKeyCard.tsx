@@ -1,23 +1,23 @@
 "use client";
 
 import { useState } from "react";
+import { getStoredApiKey } from "@/lib/api/apiKeyStore";
 import { openBillingPortal } from "@/lib/api/billing";
 import { ApiError } from "@/lib/api/client";
 import { maskApiKey } from "@/lib/format";
 import { useDashboard } from "@/hooks/useDashboard";
-import { useApiKey } from "@/hooks/useApiKey";
 import styles from "./ApiKeyCard.module.css";
 
 export default function ApiKeyCard() {
-  const { apiKey, signOut } = useApiKey();
   const { dashboard } = useDashboard();
   const [copied, setCopied] = useState(false);
   const [billingLoading, setBillingLoading] = useState(false);
   const [billingError, setBillingError] = useState<string | null>(null);
 
   async function copyKey() {
-    if (!apiKey) return;
-    await navigator.clipboard.writeText(apiKey);
+    const full = getStoredApiKey();
+    if (!full) return;
+    await navigator.clipboard.writeText(full);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }
@@ -46,16 +46,16 @@ export default function ApiKeyCard() {
         </p>
       </header>
 
-      <code className={styles.key}>{dashboard?.apiKeyMasked ?? maskApiKey(apiKey)}</code>
+      <code className={styles.key}>{dashboard?.apiKeyMasked ?? maskApiKey(getStoredApiKey())}</code>
 
       <div className={styles.actions}>
-        <button className={styles.secondary} onClick={copyKey} disabled={!apiKey}>
+        <button className={styles.secondary} onClick={copyKey} disabled={!dashboard}>
           {copied ? "Copied" : "Copy key"}
         </button>
         <button
           className={styles.primary}
           onClick={manageSubscription}
-          disabled={billingLoading || !apiKey}
+          disabled={billingLoading || !dashboard}
         >
           {billingLoading ? "Opening billing…" : "Manage subscription"}
         </button>
@@ -68,11 +68,8 @@ export default function ApiKeyCard() {
       )}
 
       <footer className={styles.footer}>
-        <button className={styles.danger} onClick={signOut}>
-          Forget this device
-        </button>
         <small className={styles.note}>
-          Removes the key from this browser. Use it on shared computers.
+          Keep this key secret. Anyone with it can process files on your account.
         </small>
       </footer>
     </section>

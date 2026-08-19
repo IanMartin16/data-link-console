@@ -46,7 +46,7 @@ export default function MarketingShell({ children }: { children: React.ReactNode
         <nav className={styles.footerNav}>
           <Link href="/security">Security</Link>
           <Link href="/pricing">Pricing</Link>
-          <Link href="https://evilink.dev">evilink</Link>
+          <Link href="https://evilink.dev">Powered by evi_link devs</Link>
         </nav>
       </footer>
     </div>

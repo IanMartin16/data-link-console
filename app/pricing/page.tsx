@@ -10,7 +10,8 @@ export const metadata = {
 
 const ROWS = [
   { label: "Max file size", free: "15 MB", starter: "150 MB" },
-  { label: "Records per file", free: "200,000", starter: "2,000,000" },
+  { label: "Records per file (CSV)", free: "200,000", starter: "2,000,000" },
+  { label: "Records per file (JSON)", free: "100,000", starter: "1,000,000" },
   { label: "Files per month", free: "10", starter: "100" },
   { label: "Cleaning operations", free: "2 of 6", starter: "All 6" },
   { label: "Custom filters", free: false, starter: true },
@@ -48,7 +49,7 @@ export default function PricingPage() {
               For a one-off cleanup or trying the engine on real data.
             </p>
             <ul className={styles.highlights}>
-              <li>Files up to 15 MB</li>
+              <li>Files up to 15 MB — 200k rows in CSV, 100k in JSON</li>
               <li>Deduplicate by email or ID</li>
               <li>10 files a month</li>
             </ul>
@@ -69,7 +70,7 @@ export default function PricingPage() {
               For recurring cleanups where the files are real exports, not samples.
             </p>
             <ul className={styles.highlights}>
-              <li>Files up to 150 MB — ten times the free limit</li>
+              <li>Files up to 150 MB — 2M rows in CSV, 1M in JSON</li>
               <li>All six operations, including deduplicate by any field</li>
               <li>Custom filters with conditions</li>
             </ul>
@@ -126,6 +127,11 @@ export default function PricingPage() {
               </tbody>
             </table>
           </div>
+          <p className={styles.tableNote}>
+            JSON files are roughly twice the size of a CSV holding the same rows, so
+            the record limit is lower for JSON. Both formats share the same file size
+            limit.
+          </p>
         </section>
 
         <section className={styles.notes}>

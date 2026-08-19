@@ -1,0 +1,100 @@
+.wrap { position: relative; }
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--dl-space-1);
+  padding: var(--dl-space-1);
+  border: none;
+  background: none;
+  color: var(--dl-text-muted);
+  cursor: pointer;
+  font: inherit;
+}
+
+.trigger:hover { color: var(--dl-text); }
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--dl-border-strong);
+  background: var(--dl-surface-2);
+  color: var(--dl-gold);
+  font-size: var(--dl-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.chevron { font-size: 10px; }
+
+.menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + var(--dl-space-2));
+  min-width: 220px;
+  z-index: 20;
+  display: grid;
+  gap: 2px;
+  padding: var(--dl-space-2);
+  border: 1px solid var(--dl-border-strong);
+  border-radius: var(--dl-radius);
+  background: var(--dl-surface);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.identity {
+  display: grid;
+  gap: 2px;
+  padding: var(--dl-space-2) var(--dl-space-3) var(--dl-space-3);
+  border-bottom: 1px solid var(--dl-border);
+  margin-bottom: var(--dl-space-1);
+}
+
+.email {
+  font-size: var(--dl-text-sm);
+  color: var(--dl-text);
+  overflow-wrap: anywhere;
+}
+
+.plan {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--dl-gold);
+}
+
+.item, .signOut {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: var(--dl-space-2) var(--dl-space-3);
+  border: none;
+  border-radius: calc(var(--dl-radius) - 3px);
+  background: none;
+  font: inherit;
+  font-size: var(--dl-text-sm);
+  color: var(--dl-text-muted);
+  cursor: pointer;
+}
+
+.item:hover { background: var(--dl-surface-2); color: var(--dl-text); }
+
+.separator {
+  height: 1px;
+  background: var(--dl-border);
+  margin: var(--dl-space-1) 0;
+}
+
+.signOut { color: var(--dl-danger); font-weight: 600; }
+.signOut:hover { background: var(--dl-surface-2); }
+
+.note {
+  margin: 0;
+  padding: 0 var(--dl-space-3) var(--dl-space-1);
+  font-size: 10px;
+  line-height: 1.5;
+  color: var(--dl-text-faint);
+}
