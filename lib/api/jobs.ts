@@ -11,6 +11,7 @@ export function toJob(raw: JobResponse, engine: Engine = "core"): Job {
     engine,
     fileName: raw.original_file_name ?? "—",
     format: raw.format ?? null,
+    fileSizeMb: raw.file_size_mb ?? null,
     preset: raw.preset ?? null,
     status: expired
       ? "expired"

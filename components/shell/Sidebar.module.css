@@ -1,4 +1,4 @@
-.sidebar, .sidebarCollapsed {
+.sidebar {
   display: flex;
   flex-direction: column;
   gap: var(--dl-space-6);
@@ -11,41 +11,11 @@
   overflow-y: auto;
 }
 
-.top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--dl-space-2);
-}
-
 .ecosystem {
   font-size: var(--dl-text-sm);
   font-weight: 600;
   color: var(--dl-ok);
   letter-spacing: 0.02em;
-}
-
-.collapse {
-  font: inherit;
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  border: 1px solid var(--dl-border-strong);
-  background: var(--dl-bg);
-  color: var(--dl-text-muted);
-  cursor: pointer;
-  line-height: 1;
-}
-
-.collapse:hover { color: var(--dl-gold); border-color: var(--dl-gold); }
-
-.product { display: grid; gap: 2px; }
-
-.productName {
-  font-size: var(--dl-text-lg);
-  font-weight: 700;
-  color: var(--dl-gold);
 }
 
 .productHint {
@@ -110,9 +80,3 @@
 .platform strong { font-size: var(--dl-text-sm); color: var(--dl-text); }
 .platform span { font-size: var(--dl-text-xs); color: var(--dl-text-faint); }
 .platform:hover { border-color: var(--dl-border-strong); }
-
-/* Colapsado: riel de iconos */
-.sidebarCollapsed { padding: var(--dl-space-4) var(--dl-space-2); }
-.sidebarCollapsed .top { justify-content: center; }
-.sidebarCollapsed .link, .sidebarCollapsed .active { justify-content: center; padding: var(--dl-space-3); }
-.sidebarCollapsed .dot { width: 7px; height: 7px; }

@@ -1,3 +1,5 @@
+import type { JobResponse } from "@/lib/types";
+
 export function getDuration(start?: string | null, end?: string | null) {
   if (!start || !end) return null;
 
@@ -17,10 +19,10 @@ export function getDuration(start?: string | null, end?: string | null) {
   return `${minutes}m ${remainingSeconds}s`;
   }
 
-  export function getProcessingTime(job: any) {
+  export function getProcessingTime(job: JobResponse): string | null {
     return getDuration(job.started_at, job.completed_at);
   }
 
-  export function getTotalTime(job: any) {
+  export function getTotalTime(job: JobResponse): string | null {
     return getDuration(job.created_at, job.completed_at);
   }

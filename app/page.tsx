@@ -97,7 +97,7 @@ export default function LandingPage() {
       <section className={styles.lifecycle}>
         <h2 className={styles.h2}>Your file does not stick around</h2>
         <p className={styles.lifecycleLead}>
-          Your upload is temporary by design. Data_Link deletes it as part of the job.
+          Most tools keep your upload. This one deletes it as part of the job.
         </p>
 
         <ol className={styles.timeline}>

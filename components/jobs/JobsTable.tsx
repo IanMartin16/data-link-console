@@ -45,7 +45,10 @@ export default function JobsTable({ jobs }: { jobs: Job[] }) {
                   <Link href={`/app/jobs/${job.id}`} className={styles.fileName}>
                     {job.fileName}
                   </Link>
-                  <small className={styles.meta}>{job.format?.toUpperCase() ?? "—"}</small>
+                  <small className={styles.meta}>
+                    {job.format?.toUpperCase() ?? "—"}
+                    {job.fileSizeMb != null && ` · ${job.fileSizeMb} MB`}
+                  </small>
                 </td>
                 <td className={styles.meta}>{job.preset ?? "—"}</td>
                 <td>
