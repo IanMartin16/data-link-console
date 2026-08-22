@@ -3,10 +3,11 @@
 .headline {
   margin: 0;
   font-size: clamp(2.2rem, 6vw, 3.4rem);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  line-height: 0.96;
+  letter-spacing: -0.035em;
   font-weight: 700;
   max-width: 16ch;
+  text-wrap: balance;
 }
 
 .headline em { font-style: normal; color: var(--dl-gold); }
@@ -14,6 +15,7 @@
 .lead {
   margin: var(--dl-space-6) 0 0;
   font-size: var(--dl-text-md);
+  font-style: italic;
   line-height: 1.6;
   color: var(--dl-text-muted);
   max-width: 56ch;

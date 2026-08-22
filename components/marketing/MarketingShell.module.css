@@ -13,7 +13,14 @@
   backdrop-filter: blur(8px);
 }
 
-.brand { font-size: var(--dl-text-md); font-weight: 700; color: var(--dl-gold); }
+.brand {
+  font-size: clamp(1.35rem, 1.8vw, 1.65rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--dl-gold);
+  white-space: nowrap;
+}
 
 .nav { display: flex; gap: var(--dl-space-6); font-size: var(--dl-text-sm); }
 .nav a { color: var(--dl-text-muted); }

@@ -1,6 +1,14 @@
 import Link from "next/link";
 import MarketingShell from "@/components/marketing/MarketingShell";
 import styles from "./landing.module.css";
+import { Fraunces } from "next/font/google";
+
+const headlineFont = Fraunces({
+  subsets: ["latin"],
+  display: "swap",
+  style: ["normal", "italic"],
+  variable: "--font-fraunces",
+});
 
 export const metadata = {
   title: "Data_Link — clean millions of rows in seconds",
@@ -21,7 +29,7 @@ export default function LandingPage() {
   return (
     <MarketingShell>
       <section className={styles.hero}>
-        <h1 className={styles.headline}>
+        <h1 className={`${styles.headline} ${headlineFont.className}`}>
           Clean millions of rows <em>in seconds</em>.
         </h1>
         <p className={styles.lead}>

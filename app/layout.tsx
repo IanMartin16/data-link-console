@@ -7,6 +7,9 @@ export const metadata: Metadata = {
     default: "Data_Link — limpia, convierte y protege tus datos",
     template: "%s · Data_Link",
   },
+   icons: {
+    icon: "/data-link-icon.png",
+  },
   description:
     "Deduplica millones de registros en segundos. Tu archivo original no sobrevive al proceso.",
 };
