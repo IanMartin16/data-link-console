@@ -1,5 +1,7 @@
-// TODO: Cuenta, retencion, miembros.
+import SettingsPanel from "@/components/settings/SettingsPanel";
+
+export const metadata = { title: "Settings" };
 
 export default function SettingsPage() {
-  return <p>SettingsPage</p>;
+  return <SettingsPanel />;
 }

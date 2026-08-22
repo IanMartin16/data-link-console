@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
 import styles from "./Sidebar.module.css";
 
 /**
@@ -10,9 +9,6 @@ import styles from "./Sidebar.module.css";
  *
  * WORKSPACE  — depende del producto. Aqui crece cuando entre transform.
  * ACCOUNT    — es de la cuenta y sirve a todos los productos. No crece.
- *
- * Es lo que evita que el menu se desborde cuando el portal albergue
- * mas de una API.
  */
 const WORKSPACE = [
   { href: "/app", label: "Overview", exact: true },
@@ -29,7 +25,6 @@ const ACCOUNT = [
 
 export default function Sidebar() {
   const pathname = usePathname();
-  const [collapsed, setCollapsed] = useState(false);
 
   function isActive(href: string, exact?: boolean) {
     return exact ? pathname === href : pathname.startsWith(href);
@@ -41,17 +36,16 @@ export default function Sidebar() {
   ) {
     return (
       <div className={styles.group}>
-        {!collapsed && <p className={styles.groupTitle}>{title}</p>}
+        <p className={styles.groupTitle}>{title}</p>
         <ul className={styles.list}>
           {items.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
                 className={isActive(item.href, item.exact) ? styles.active : styles.link}
-                title={collapsed ? item.label : undefined}
               >
                 <span className={styles.dot} aria-hidden />
-                {!collapsed && item.label}
+                {item.label}
               </Link>
             </li>
           ))}
@@ -61,41 +55,23 @@ export default function Sidebar() {
   }
 
   return (
-    <nav
-      className={collapsed ? styles.sidebarCollapsed : styles.sidebar}
-      aria-label="Navegación principal"
-    >
-      <div className={styles.top}>
-        {!collapsed && (
-          <Link href="/" className={styles.ecosystem}>
-            evi_link devs
-          </Link>
-        )}
-        <button
-          className={styles.collapse}
-          onClick={() => setCollapsed(!collapsed)}
-          aria-label={collapsed ? "Expandir menú" : "Colapsar menú"}
-        >
-          {collapsed ? "›" : "‹"}
-        </button>
-      </div>
+    <nav className={styles.sidebar} aria-label="Navegación principal">
+      <Link href="/" className={styles.ecosystem}>
+        evi_link devs
+      </Link>
 
-      {!collapsed && (
-        <div className={styles.product}>
-          <span className={styles.productName}>Data_Link</span>
-          <span className={styles.productHint}>Clean · Convert · Protect</span>
-        </div>
-      )}
+      <div className={styles.product}>
+        <span className={styles.productName}>Data_Link</span>
+        <span className={styles.productHint}>Clean · Convert · Protect</span>
+      </div>
 
       {renderGroup("Workspace", WORKSPACE)}
       {renderGroup("Account", ACCOUNT)}
 
-      {!collapsed && (
-        <Link href="https://evilink.dev" className={styles.platform}>
-          <strong>Evilink Platform</strong>
-          <span>One ecosystem. Unlimited connections.</span>
-        </Link>
-      )}
+      <Link href="https://evilink.dev" className={styles.platform}>
+        <strong>Evilink Platform</strong>
+        <span>One ecosystem. Unlimited connections.</span>
+      </Link>
     </nav>
   );
 }
