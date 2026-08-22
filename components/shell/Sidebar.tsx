@@ -62,8 +62,9 @@ export default function Sidebar() {
 
       <div className={styles.product}>
         <span className={styles.productName}>Data_Link</span>
-        <span className={styles.productHint}>Clean · Convert · Protect</span>
       </div>
+        <span className={styles.productHint}>Clean · Convert · Protect</span>
+      
 
       {renderGroup("Workspace", WORKSPACE)}
       {renderGroup("Account", ACCOUNT)}
