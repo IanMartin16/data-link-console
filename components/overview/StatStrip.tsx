@@ -17,7 +17,7 @@ export default function StatStrip() {
   if (isLoading || !dashboard) return null;
 
   const pct = dashboard.filesLimit
-    ? Math.round((dashboard.filesProcessedThisMonth / dashboard.filesLimit) * 100)
+    ? Math.round((dashboard.filesUsed / dashboard.filesLimit) * 100)
     : 0;
   const near = pct >= 80;
 
