@@ -19,7 +19,7 @@ export async function getDashboard(): Promise<DashboardData> {
     canUpgrade: billing.can_upgrade ?? false,
     email: raw.user?.email ?? null,
     apiKeyMasked: raw.api_key?.masked ?? null,
-    filesUsed: usage.files_used ?? 0,
+    filesUsed: usage.files_processed_this_month ?? 0,
     filesLimit: limits.files_per_month ?? 0,
     maxFileSizeMb: limits.max_file_size_mb ?? 0,
     maxRecordsPerFile: limits.max_records_per_file ?? 0,
