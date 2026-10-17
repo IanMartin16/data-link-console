@@ -7,7 +7,7 @@ export type Plan = "free" | "starter" | "pro" | "business";
 export interface DashboardData {
   plan: Plan;
   planStatus: "active" | "past_due" | "canceled";
-  filesUsed: number;
+  filesProcessedThisMonth: number;
   filesLimit: number;
   maxFileSizeMb: number;
   maxRecordsPerFile: number;
